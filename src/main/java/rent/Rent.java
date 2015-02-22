@@ -1,4 +1,4 @@
-package rent; //TODO: I'm not sure whether a package name is correct.
+package src.main.java.rent; //TODO: I'm not sure whether a package name is correct.
 
 import java.util.Date;
 
@@ -20,12 +20,19 @@ public class Rent{
 
   //TODO: maybe mysql provide location sutructure, investigate it, please
   //TODO: you can find information here http://dev.mysql.com/doc/refman/5.6/en/spatial-extensions.html
+  @Column(name = "lat")
   private Long lat;
+
+  @Column(name = "lon")
   private Long lon;
 
+  @Column(name = "title")
   private String titleName;
+
+  @Column(name = "created") 
   private Date date;
 
+  @Column(name = "price")
   private Double pricePerMonth;
 
   //TODO: should be address and contacts
