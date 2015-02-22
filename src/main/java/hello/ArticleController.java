@@ -19,12 +19,14 @@ public class ArticleController {
 
     @RequestMapping(method=RequestMethod.GET, value="/article/{id}")
     public Article getArticle(@PathVariable long id) {
+       
        for(Article a: articles){
         if(a.getId() == id){
           return a;
         }
        }
-      return null;
+       return null;
+      // throw new ResourceNotFoundException();
      }
 
     @RequestMapping(method=RequestMethod.POST, value="/article")
